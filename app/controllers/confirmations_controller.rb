@@ -34,6 +34,7 @@ class ConfirmationsController < Milia::ConfirmationsController
        @confirmable.skip_confirm_change_password
 
       log_action( "devise pass-thru" )
+      # als modified/added next several blocks
       self.resource = resource_class.confirm_by_token(params[:confirmation_token])
       yield resource if block_given?
 
