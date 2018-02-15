@@ -23,7 +23,6 @@ class MembersController < ApplicationController
 
   end
 
-
   private
 
   def member_params()
