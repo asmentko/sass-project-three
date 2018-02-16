@@ -2,7 +2,8 @@ module DevisePermittedParameters
 	extend ActiveSupport::Concern
 
 	included do
-		before_filter :configure_permitted_parameters
+    # als had to change from before_filter to before_action
+		before_action :configure_permitted_parameters
 	end
 
 	protected
